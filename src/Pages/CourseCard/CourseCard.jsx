@@ -17,7 +17,15 @@ const CourseCard = ({ course }) => {
           <h2 className="text-center font-bold text-2xl">{title}</h2>
           <p className="text-center">{details.slice(0, 100)}. .</p>
           <div className="card-actions justify-center">
-            <button className="btn btn-primary">Buy Now</button>
+            <button
+              style={{
+                backgroundImage:
+                  "linear-gradient(90deg, #11998e 0%, #38ef7d 100%)",
+              }}
+              className="btn text-white "
+            >
+              Buy Now
+            </button>
           </div>
         </div>
       </div>
