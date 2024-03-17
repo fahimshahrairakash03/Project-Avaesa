@@ -1,9 +1,85 @@
-import React from "react";
+import React, { useEffect } from "react";
+import CourseCard from "../CourseCard/CourseCard";
 
 const Courses = () => {
+  const courses = [
+    {
+      _id: "0282e1e58a5c404fbd15261f11c2ab6a",
+      category_id: "01",
+      rating: { number: 4.5, badge: "Excellent" },
+      title: "Tv Camera Operation",
+      thumbnail_url: "https://i.ibb.co/QnwC4sG/unsplash-Eh-Tc-C9s-YXsw-11.png",
+      image_url:
+        "https://images.pexels.com/photos/2608519/pexels-photo-2608519.jpeg?auto=compress&cs=tinysrgb&w=600",
+      details:
+        "This course teaches enhanced studio camera operator techniques for TV studio camera operators, and offers a review of existing skill sets for the experienced studio camera operator",
+    },
+    {
+      _id: "0282e2e58a5c404fbd15261f11c2ab6a",
+      category_id: "02",
+      rating: { number: 4.5, badge: "Excellent" },
+      title: "Tv News Reporting",
+      thumbnail_url: "https://i.ibb.co/QnwC4sG/unsplash-Eh-Tc-C9s-YXsw-11.png",
+      image_url:
+        "https://images.pexels.com/photos/2531552/pexels-photo-2531552.jpeg?auto=compress&cs=tinysrgb&w=600",
+      details:
+        "Students learn elements of TV journalism, concentrating on news gathering and how to cover an on-the-spot news story with a camera crew. Topics include interviewing techniques; effective newsgathering methods; practice on how to write in clear broadcast ",
+    },
+    {
+      _id: "0282e3e58a5c404fbd15261f11c2ab6a",
+      category_id: "03",
+      rating: { number: 4.5, badge: "Excellent" },
+      title: "Photo Journalism",
+      thumbnail_url: "https://i.ibb.co/QnwC4sG/unsplash-Eh-Tc-C9s-YXsw-11.png",
+      image_url:
+        "https://images.pexels.com/photos/243757/pexels-photo-243757.jpeg?auto=compress&cs=tinysrgb&w=600",
+      details:
+        "Photographs can change the world and how we see it. In this course, students will be introduced to the history of photojournalism, exploring the stories behind iconic images of critical moments in human history captured by various photographers.",
+    },
+    {
+      _id: "0282e4e58a5c404fbd15261f11c2ab6a",
+      category_id: "04",
+      rating: { number: 4.5, badge: "Excellent" },
+      title: "Digital Video Editing",
+      thumbnail_url: "https://i.ibb.co/QnwC4sG/unsplash-Eh-Tc-C9s-YXsw-11.png",
+      image_url:
+        "https://images.pexels.com/photos/257904/pexels-photo-257904.jpeg?auto=compress&cs=tinysrgb&w=600",
+      details:
+        "The course will cover the fundamental theoretical and practical aspects of video editing. Further, the course will impart technical knowhow of operating two different video editing software applications.",
+    },
+    {
+      _id: "0282e5e58a5c404fbd15261f11c2ab6a",
+      category_id: "05",
+      rating: { number: 4.5, badge: "Excellent" },
+      title: "Content Writing",
+      thumbnail_url: "https://i.ibb.co/QnwC4sG/unsplash-Eh-Tc-C9s-YXsw-11.png",
+      image_url:
+        "https://images.pexels.com/photos/1766604/pexels-photo-1766604.jpeg?auto=compress&cs=tinysrgb&w=600",
+      details:
+        "The Content Writing courses we offer are designed to help prepare you for a career in digital marketing, editorial publishing, corporate communication, and creative storytelling, equipping you with the skills to craft compelling, engaging, and effective written content.",
+    },
+    {
+      _id: "0282e6e58a5c404fbd15261f11c2ab6a",
+      category_id: "06",
+      rating: { number: 4.5, badge: "Excellent" },
+      title: "Public Speaking",
+      thumbnail_url: "https://i.ibb.co/QnwC4sG/unsplash-Eh-Tc-C9s-YXsw-11.png",
+      image_url:
+        "https://images.pexels.com/photos/716276/pexels-photo-716276.jpeg?auto=compress&cs=tinysrgb&w=600",
+      details:
+        "The Public Speaking courses we offer are designed to help prepare you for a career in corporate communication, motivational speaking, presentation delivery, and media appearances, equipping you with the skills to speak confidently and effectively in various public settings.",
+    },
+  ];
   return (
-    <div>
-      <h1>Courses</h1>
+    <div className="">
+      <h1 className="py-10 text-5xl font-bold bg-base-200 text-center">
+        Courses
+      </h1>
+      <div className="grid grid-cols-3 pb-10 bg-base-200 gap-8 px-6">
+        {courses.map((course) => (
+          <CourseCard key={course._id} course={course}></CourseCard>
+        ))}
+      </div>
     </div>
   );
 };

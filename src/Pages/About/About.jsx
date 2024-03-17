@@ -3,7 +3,7 @@ import about from "../../assets/about/About.jpg";
 
 const About = () => {
   return (
-    <div>
+    <div className="">
       <div className="hero min-h-screen bg-base-200 px-9">
         <div className="hero-content flex-col lg:flex-row">
           <div className="w-3/4">
@@ -27,7 +27,7 @@ const About = () => {
               Writing specialisms include news, politics, local government,
               crime, housing and transport.
             </p>
-            <button className="btn btn-primary">Get Started</button>
+            <div></div>
           </div>
         </div>
       </div>
